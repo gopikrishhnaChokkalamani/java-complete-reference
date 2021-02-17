@@ -1,5 +1,7 @@
 package com.main.java.strings;
 
+import java.util.StringTokenizer;
+
 public class StringMain {
 
   public static void main(String[] args) {
@@ -18,5 +20,11 @@ public class StringMain {
 
     //not thread safe, so more efficient that string buffer
     StringBuilder sb = new StringBuilder();
+
+    //allows to break the string with a delimiter
+    StringTokenizer st = new StringTokenizer("Hello World", " ");
+    while(st.hasMoreElements()) {
+      System.out.println(st.nextElement());
+    }
   }
 }
