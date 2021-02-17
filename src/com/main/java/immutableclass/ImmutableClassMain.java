@@ -20,7 +20,7 @@ public class ImmutableClassMain {
     Student s = new Student(12, "john", department, map);
 
     System.out.println("Department Name before modification = " + s.getDepartment().getName());
-    //this will set the value inside the Department of Student
+    //this will set the value inside the Department of EagerStudent
     //to avoid this we have to clone the department, so that value can never be changed
     department.setName("MECH");
     System.out.println("Department Name after modification = " + s.getDepartment().getName());

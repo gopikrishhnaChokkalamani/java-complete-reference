@@ -4,6 +4,11 @@ public class SingletonMain {
 
   public static void main(String[] args) {
     //Singleton - 1
-    Student student = Student.getInstance();
+    EagerStudent student = EagerStudent.getInstance();
+
+    int i = 10;
+    Integer ii = i;
+
+    int j = ii;
   }
 }
