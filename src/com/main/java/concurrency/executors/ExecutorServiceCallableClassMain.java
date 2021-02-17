@@ -28,6 +28,8 @@ public class ExecutorServiceCallableClassMain {
       return Thread.currentThread().getName() + " :: Current time :: " + LocalDateTime.now();
     };
 
+//    Callable<String> callable = () -> Thread.currentThread().getName() + " :: Current time :: " + LocalDateTime.now();
+
     ExecutorService executor = Executors.newFixedThreadPool(1);
 
     //Executor Service using invokeAll()
