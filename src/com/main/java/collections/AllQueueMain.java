@@ -43,7 +43,11 @@ public class AllQueueMain {
     System.out.println();
 
     //cannot have null values, can have duplicates, sorted to ascending default
-    Queue<String> pq = new PriorityQueue<>();
+    //Queue<String> pq = new PriorityQueue<>();
+    //sort in ascending by length
+    //Queue<String> pq = new PriorityQueue<>(Comparator.comparing(s -> s.length()));
+    //sort descending
+    Queue<String> pq = new PriorityQueue<>((s1, s2) -> s2.charAt(0) - s1.charAt(0));
     pq.add("john");
     pq.add("mary");
     pq.add("john");
@@ -55,5 +59,8 @@ public class AllQueueMain {
     while(!pq.isEmpty()) {
       System.out.println(pq.remove());
     }
+
+    //queue.remove - if queue is emmpty throws exception
+    //queue.poll - returns null
   }
 }
