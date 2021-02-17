@@ -1,11 +1,14 @@
 package com.main.java.collections;
 
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 public class AllMapMain {
 
@@ -62,7 +65,7 @@ public class AllMapMain {
     System.out.println();
 
     //cannot have null key or null value
-    //synchronized
+    //synchronized - locks the entire object
     Hashtable<String, String> hash = new Hashtable<>();
     hash.put("name", "john");
     hash.put("id", "123456");
@@ -82,6 +85,31 @@ public class AllMapMain {
     for (Map.Entry<String, String> entry : hash.entrySet()) {
       System.out.println(entry.getKey() + " - " + entry.getValue());
     }
+
+    System.out.println();
+
+    //Does not allow null key or value
+    //thread safe - but lock is on the block of the map
+    //for read map is not locked
+    Map<String, String> cMap = new ConcurrentHashMap<>();
+    cMap.put("name", "john");
+    cMap.put("id", "123456");
+    cMap.put("department", "computer science");
+    cMap.put("name", "mary");
+
+    for (Map.Entry<String, String> entry : cMap.entrySet()) {
+      System.out.println(entry.getKey() + " - " + entry.getValue());
+    }
+
+    //Convert a HashMap to ConcurrentHashMap
+    Map<String, String> newCMap = new ConcurrentHashMap<>(map);
+
+    System.out.println();
+
+    //lock on the entire object
+    //even read will lock the object
+    // if one thread is modifying and another is iterating over, then will result in concurrent modification exception
+    Map<String, String> sMap = Collections.synchronizedMap(map);
 
   }
 }
