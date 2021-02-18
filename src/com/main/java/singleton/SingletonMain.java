@@ -14,4 +14,15 @@ public class SingletonMain {
 
     int j = ii;
   }
+
+  //Approaches
+  //Eager Singleton
+  //Lazy Singleton
+  //Static block Singleton - this is also eager
+  //Synchrnozied on the getInstance()
+  //all these can be broken using reflection
+  //using serialization
+  //using Enum
+  //using private static inner class - widely used and no syncronization needed
+
 }
