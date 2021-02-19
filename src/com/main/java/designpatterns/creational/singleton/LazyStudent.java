@@ -1,4 +1,4 @@
-package com.main.java.singleton;
+package com.main.java.designpatterns.creational.singleton;
 
 public class LazyStudent {
 
