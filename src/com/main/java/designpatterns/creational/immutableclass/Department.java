@@ -1,4 +1,4 @@
-package com.main.java.immutableclass;
+package com.main.java.designpatterns.creational.immutableclass;
 
 //Fixing Mutable Object Department with Cloneable
 public class Department implements Cloneable {

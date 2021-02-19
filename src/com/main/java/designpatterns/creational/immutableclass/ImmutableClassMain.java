@@ -1,6 +1,4 @@
-package com.main.java.immutableclass;
-
-import com.sun.tools.doclets.internal.toolkit.util.DeprecatedAPIListBuilder;
+package com.main.java.designpatterns.creational.immutableclass;
 
 import java.util.HashMap;
 import java.util.Map;

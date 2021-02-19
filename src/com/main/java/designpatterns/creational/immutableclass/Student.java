@@ -1,4 +1,4 @@
-package com.main.java.immutableclass;
+package com.main.java.designpatterns.creational.immutableclass;
 
 import java.util.Collections;
 import java.util.HashMap;
