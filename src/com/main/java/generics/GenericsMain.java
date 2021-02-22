@@ -13,6 +13,8 @@ public class GenericsMain {
     //WildCards
     fetch(Arrays.asList(1, 2, 3, 4, 5));
     fetch(Arrays.asList("hello", "hi"));
+    fetch(Arrays.asList(true, false, true));
+    fetch(Arrays.asList('C', 'D', 'A'));
 
     // Bounded Type Parameter
     Student student = new Student();

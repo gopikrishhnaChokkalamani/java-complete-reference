@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CompositionMain {
 
-  //PArt of relation
+  //Part of relation
   //Books are part of library
   //if library has no books, then it cannot exist
   // Strong relation

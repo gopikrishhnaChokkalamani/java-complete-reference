@@ -3,7 +3,7 @@ package com.main.java.oopsconcepts.inheritance.classes;
 //class cannot extend multiple classes - multiple inheritance not possible in class
 // error -> public class Cat extends MemberInnerClass, EcoSystem {
 //but with java 8 interface - static, default methods - its possible to achieve
-public class Cat extends Animal{
+public class Cat extends Animal {
 
   @Override
   public void character() {
@@ -21,5 +21,11 @@ public class Cat extends Animal{
   public void isDomestic() {
     super.isDomestic();
     System.out.println("Cat class isDomestic");
+  }
+
+  @Override
+  public void ecosystem() {
+    super.ecosystem();
+    System.out.println("Cat class ecosystem");
   }
 }

@@ -29,6 +29,7 @@ public class ExceptionClass {
     }
 
     //after Java 7 - try with resources
+    // no need to close explicitly, java takes care
     try (Scanner scanner = new Scanner(new File("test.text"))) {
       while(scanner.hasNext()) {
         System.out.println(scanner.nextLine());

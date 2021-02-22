@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentMap;
 public class AllMapMain {
 
   public static void main(String[] args) {
-    //cannot have duplicates - value will be overwritten
+    //cannot have duplicates - value will be overwritten, duplicate key will be overwritten, duplicate values no issues
     //can have one null key, multiple null values
     //no order
     Map<String, String> map = new HashMap<>();
@@ -102,14 +102,15 @@ public class AllMapMain {
     }
 
     //Convert a HashMap to ConcurrentHashMap
-    Map<String, String> newCMap = new ConcurrentHashMap<>(map);
+    //Map<String, String> newCMap = new ConcurrentHashMap<>(map);
+    //Map<String, String> mmap = new ConcurrentHashMap<>();
 
     System.out.println();
 
     //lock on the entire object
     //even read will lock the object
     // if one thread is modifying and another is iterating over, then will result in concurrent modification exception
-    Map<String, String> sMap = Collections.synchronizedMap(map);
+    //Map<String, String> sMap = Collections.synchronizedMap(map);
 
   }
 }

@@ -1,6 +1,6 @@
 package com.main.java.oopsconcepts.abstraction.abstractclass;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
 
   @Override
   public void behaviour() {

@@ -2,6 +2,9 @@ package com.main.java.designpatterns.creational.prototype;
 
 public class ProtoypeMain {
 
+  //think of chess game
+  //initial setup of the board
+  //everything is preloaded, just use that object
   public static void main(String[] args) throws CloneNotSupportedException {
     Student student = new Student();
     student.load();

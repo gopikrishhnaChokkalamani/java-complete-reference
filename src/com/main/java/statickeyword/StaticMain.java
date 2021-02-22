@@ -14,6 +14,8 @@ public class StaticMain {
   }
 
   //class can be static only if its nested
+  //this Builder pattern
+  //also singleton static iner class impl
   public static class StaticClass {
 
     public static void staticMethod() {
