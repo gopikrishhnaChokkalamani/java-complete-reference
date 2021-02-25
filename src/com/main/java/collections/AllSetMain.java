@@ -17,6 +17,7 @@ public class AllSetMain {
     sets.add("sam");
     sets.add("jack");
     sets.add(null);
+    sets.add(null);
     //even if you add duplicate, it will not result in failure, it will just be eliminated
     sets.add("john");
     sets.stream().forEach(System.out::println);
@@ -44,6 +45,7 @@ public class AllSetMain {
     tset.add("mark");
     tset.add("john");
     tset.add("mark");
+    //tset.add(null);  //null pointer
     tset.stream().forEach(System.out::println);
     System.out.println();
 
