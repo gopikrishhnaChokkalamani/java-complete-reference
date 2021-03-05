@@ -111,6 +111,5 @@ public class AllMapMain {
     //even read will lock the object
     // if one thread is modifying and another is iterating over, then will result in concurrent modification exception
     //Map<String, String> sMap = Collections.synchronizedMap(map);
-
   }
 }

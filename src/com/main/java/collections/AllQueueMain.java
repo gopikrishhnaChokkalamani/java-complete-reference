@@ -1,16 +1,12 @@
 package com.main.java.collections;
 
-import java.util.ArrayDeque;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class AllQueueMain {
 
   public static void main(String[] args) {
 
-    //can have duplicates, insertion order, can have null inked list acting as queue here
+    //can have duplicates, insertion order (FIFO), can have null inked list acting as queue here
     Queue<String> queue = new LinkedList<>();  //linkedlist implements both list and dequeue
     queue.add("john");
     queue.add("mary");
@@ -64,5 +60,21 @@ public class AllQueueMain {
     //queue.poll - returns null
 
     //for threadsafe user PriorityBlockingQueue
+
+    //double sided queue, see below features
+    Deque<String> deque = new ArrayDeque<>();
+    deque.add("john");
+    deque.add("mary");
+    deque.add("john");
+    deque.add("mary");
+    deque.add("sam");
+    deque.add("jack");
+
+//    deque.addFirst();
+//    deque.addLast();
+//    deque.removeFirst();
+//    deque.removeLast();
+//    deque.peekFirst();
+//    deque.peekLast();
   }
 }
