@@ -45,20 +45,18 @@ public class SerializationMain {
     System.out.println("Before Serialization, Current Object : " + s.toString());
     String fileName = "serialize.txt";
 
-    try (FileOutputStream f = new FileOutputStream(fileName)) {
-      ObjectOutputStream o = new ObjectOutputStream(f);
+    try (ObjectOutputStream o = new ObjectOutputStream(new FileOutputStream(fileName))) {
       o.writeObject(s);
-      o.close();
       //s.dob = 20101010;
       System.out.println("After Serialization, Current Object : " + s.toString());
     } catch (IOException e) {
       e.printStackTrace();
     }
 
-    try (FileInputStream f = new FileInputStream(fileName)) {
-      ObjectInputStream o = new ObjectInputStream(f);
+    System.out.println();
+
+    try (ObjectInputStream o = new ObjectInputStream(new FileInputStream(fileName))) {
       Student student = (Student)o.readObject();
-      o.close();
       System.out.println("After DeSerialization, New Object : " + student.toString());
     } catch (IOException | ClassNotFoundException e) {
       e.printStackTrace();
