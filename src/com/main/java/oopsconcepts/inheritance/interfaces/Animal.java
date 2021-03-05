@@ -4,21 +4,26 @@ public class Animal implements AnimalInterface, EcoSystemInterface {
 
   @Override
   public void character() {
-    System.out.println("MemberInnerClass Class character");
+    System.out.println("Animal Class character");
   }
 
   @Override
   public void isCarnivorous() {
-    System.out.println("MemberInnerClass Class isCarnivours");
+    System.out.println("Animal Class isCarnivours");
   }
 
   @Override
   public void isDomestic() {
-    System.out.println("MemberInnerClass class isDomestic");
+    System.out.println("Animal class isDomestic");
+  }
+
+  @Override
+  public void defaultMethod() {
+    System.out.println("Animal Class defaultMethod");
   }
 
   @Override
   public void ecosystem() {
-    System.out.println("MemberInnerClass class ecosystem");
+    System.out.println("Animal class ecosystem");
   }
 }

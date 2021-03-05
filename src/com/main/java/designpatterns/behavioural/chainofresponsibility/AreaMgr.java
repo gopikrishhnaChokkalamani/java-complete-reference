@@ -1,6 +1,6 @@
 package com.main.java.designpatterns.behavioural.chainofresponsibility;
 
-public class PanelReview implements Chain {
+public class AreaMgr implements Chain {
 
   private Chain chain;
 

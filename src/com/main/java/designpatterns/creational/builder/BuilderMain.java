@@ -6,7 +6,7 @@ import java.util.List;
 public class BuilderMain {
 
   //instead of creating the entire object, create wat u need
-  //think of scenarios of a large object with lot of setters
+  //think of scenarios of a large object with lot of setters, do we need to lot of setters? (or)
   //sometimes u just need few to build the object, even though u can do it via constructor, how many constructors will u create?
   //creating the object in multiple ways
   public static void main(String[] args) {

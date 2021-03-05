@@ -45,8 +45,11 @@ public class CompletableFutureMain {
     System.out.println(sb1.toString());
 
     //supply async example
+    System.out.println("supplyAsync");
     supplyAsync();
+    System.out.println("\nsupplyAsyncByExecutor");
     supplyAsyncByExecutor();
+    System.out.println("\nsupplyAsyncWhenComplete");
     supplyAsyncWhenComplete();
   }
 
@@ -62,7 +65,15 @@ public class CompletableFutureMain {
             //.exceptionally(throwable -> )
             //.thenApplyAsync(s -> )
             //.thenAccept()
+
+    //this will block
     cf.get();
+
+    //this will not block returns a default value and main thread can continue
+    //cf.getNow("completed");
+
+    //or u can use a complete() method to manually complete
+    cf.complete("completed");
   }
 
   //this will use the thread from executor, instead of forkjoinpool

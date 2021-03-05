@@ -6,7 +6,6 @@ public class InheritanceInterfaceMain {
     Animal animal = new Cat();
     animal.character();;
     animal.ecosystem();
-    animal.character();
     animal.isCarnivorous();
     animal.isDomestic();
   }
