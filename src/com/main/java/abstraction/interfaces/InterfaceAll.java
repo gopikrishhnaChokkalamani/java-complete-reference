@@ -1,4 +1,4 @@
-package com.main.java.interfaces;
+package com.main.java.abstraction.interfaces;
 
 public interface InterfaceAll {
   

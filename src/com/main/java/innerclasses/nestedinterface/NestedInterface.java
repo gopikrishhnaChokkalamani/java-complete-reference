@@ -7,5 +7,12 @@ public interface NestedInterface {
   public interface NestedNestedInterface {
 
     void message();
+
+    class AnotherClass {
+
+      public void message() {
+        System.out.println("hello");
+      }
+    }
   }
 }
