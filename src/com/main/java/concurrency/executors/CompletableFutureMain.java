@@ -25,7 +25,6 @@ public class CompletableFutureMain {
     System.out.println(is);
     System.out.println("hi");
 
-
     //thenApply() will happen after the completion stage, it will apply a function on the result from previous stage
     //execution of function will be blocking, now getNow() will only be reached after the function completes
     CompletableFuture<String> thenApply = CompletableFuture.completedFuture("thenApply").thenApply(String::toUpperCase);
