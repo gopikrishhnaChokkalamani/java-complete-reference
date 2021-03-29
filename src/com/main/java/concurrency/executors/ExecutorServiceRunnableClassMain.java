@@ -4,6 +4,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 public class ExecutorServiceRunnableClassMain {
 
@@ -37,8 +38,9 @@ public class ExecutorServiceRunnableClassMain {
 
     //Returns a Future, if callable is used
     Future<String> result = executorService.submit(runnable, "DONE");
-    //programmitaically cancel thread execution
+    //programmatically cancel thread execution
     //result.cancel(true);
+    //result.get(200, TimeUnit.MILLISECONDS);  // if you wan to set a timeout of get
 
     while(!result.isDone()) {
       System.out.println("Method Return value " + result.get());

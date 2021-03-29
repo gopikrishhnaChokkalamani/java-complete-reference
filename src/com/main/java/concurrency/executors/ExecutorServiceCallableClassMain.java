@@ -19,19 +19,19 @@ public class ExecutorServiceCallableClassMain {
     //callable call throw exception, runnable does not throw exception
 
     //how to create callable
-//    Callable<String> callable = new Callable<String>() {
-//      @Override
-//      public String call() throws Exception {
-//        return null;
-//      }
-//    };
+    //    Callable<String> callable = new Callable<String>() {
+    //      @Override
+    //      public String call() throws Exception {
+    //        return null;
+    //      }
+    //    };
 
     Callable<String> callable = () -> {
       TimeUnit.MILLISECONDS.sleep(1000);
       return Thread.currentThread().getName() + " :: Current time :: " + LocalDateTime.now();
     };
 
-//    Callable<String> callable = () -> Thread.currentThread().getName() + " :: Current time :: " + LocalDateTime.now();
+    //    Callable<String> callable = () -> Thread.currentThread().getName() + " :: Current time :: " + LocalDateTime.now();
 
     ExecutorService executor = Executors.newFixedThreadPool(1);
 

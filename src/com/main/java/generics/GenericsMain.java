@@ -19,6 +19,10 @@ public class GenericsMain {
     fetch(Arrays.asList(true, false, true));
     fetch(Arrays.asList('C', 'D', 'A'));
 
+    //Bounded WildCards
+    List<Cat> cats = new ArrayList<>();
+    go(cats);
+
     // Bounded Type Parameter
     Student student = new Student();
     student.print(Arrays.asList("student list 1", "student list 2"));
