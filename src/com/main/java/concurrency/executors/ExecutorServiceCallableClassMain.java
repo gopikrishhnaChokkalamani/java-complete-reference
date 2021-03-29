@@ -1,6 +1,7 @@
 package com.main.java.concurrency.executors;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -48,6 +49,7 @@ public class ExecutorServiceCallableClassMain {
     //submit() one, invokeall collection
     List<Future<String>> results = executor.invokeAll(tasks);
     for (Future<String> result : results) {
+      //even though the thread is sleeping for 1000, u get all the results after 3000, waiting for all to complete
       System.out.println(result.get());
     }
 

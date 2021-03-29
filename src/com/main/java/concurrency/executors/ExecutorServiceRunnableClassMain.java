@@ -32,10 +32,13 @@ public class ExecutorServiceRunnableClassMain {
 
     ExecutorService executorService = Executors.newFixedThreadPool(10);
 
+    //does not return anything
     executorService.execute(runnable);
 
-    //provides aysnc impl
+    //Returns a Future, if callable is used
     Future<String> result = executorService.submit(runnable, "DONE");
+    //programmitaically cancel thread execution
+    //result.cancel(true);
 
     while(!result.isDone()) {
       System.out.println("Method Return value " + result.get());

@@ -78,7 +78,7 @@ class Notifier implements Runnable {
     synchronized (msg) {
       try {
         Thread.sleep(1000); //sleep does not release lock on the object
-        msg.notify(); //wakes up only one thread
+        msg.notify(); //wakes up only one thread other thread will wait forever resulting in deadlock
         //msg.notifyAll(); // wakes up all threads
       } catch (InterruptedException e) {
         e.printStackTrace();

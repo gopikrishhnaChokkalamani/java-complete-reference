@@ -5,14 +5,13 @@ import java.io.Serializable;
 public class Student implements Serializable {
 
   //variable is hidden to the caller and he is forced to use only get and set method
-  //what happens in get or set is hidden to the actual caller
+  //what happens inside get or set is hidden to the actual caller
   private String name;
 
   private String age;
 
   private String Department;
 
-  //what happens in get or set is hidden to the actual caller
   public String getName() {
     return name + "hello";
   }

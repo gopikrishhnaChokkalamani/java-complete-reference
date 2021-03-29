@@ -28,7 +28,7 @@ class Account implements Runnable {
 
   @Override
   public void run() {
-    //one way to fixing will avoid overdrawn, but our use case is john should withdraw first,
+    //one way to fixing using synchronized this will avoid overdrawn, but our use case is john should withdraw first,
     // still the behaviour outcome is NOT correct
         synchronized (this) {
           withdraw(75);

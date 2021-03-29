@@ -6,10 +6,10 @@ public class ChainMain {
 
   public ChainMain() {
     this.chain = new Supervisor();
-    Chain panel = new PanelReview();
+    Chain areaMgr = new AreaMgr();
     Chain division = new DivisionMgr();
-    chain.next(panel);
-    panel.next(division);
+    chain.next(areaMgr);
+    areaMgr.next(division);
   }
 
   //classic example is loan approval process, where if the amout is larger it needs approval from above

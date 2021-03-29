@@ -7,4 +7,12 @@ public interface AnimalInterface {
   public void isCarnivorous();
 
   public void isDomestic();
+
+  static void staticMethod() {
+    System.out.println("Animal INterface static method");
+  }
+
+  default void defaultMethod() {
+    System.out.println("Animal INterface static method");
+  }
 }

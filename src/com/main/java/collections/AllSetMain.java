@@ -9,7 +9,7 @@ import java.util.TreeSet;
 public class AllSetMain {
 
   public static void main(String[] args) {
-    //Cannot have duplicates, no order
+    //Cannot have duplicates, no order, can have one null
     Set<String> sets = new HashSet<>();
     sets.add("john");
     sets.add("mark");
@@ -38,6 +38,7 @@ public class AllSetMain {
     t.add(9);
     t.add(6);
     t.add(2);
+    //t.add(null); - cannot have null
     t.stream().forEach(System.out::println);
 
     //sorted ascenting order, ignored duplicates

@@ -1,10 +1,6 @@
 package com.main.java.collections;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 public class AllListMain {
 
@@ -23,6 +19,11 @@ public class AllListMain {
     list.add(null);
     list.stream().forEach(System.out::println);
 
+    //why array list maniupulation is slow
+    //when you remove an element in the array, all the elements will shift one cell to left i.e i = i - 1;
+    //this is O(n)
+    //so for records of 1000, u will see performance issue coming up
+
     System.out.println();
 
     //insertion order, synchronization so poor performance, can have duplicates
@@ -34,6 +35,8 @@ public class AllListMain {
     vector.add("john");
     vector.add(null);
     vector.stream().forEach(System.out::println);
+
+    Enumeration<String> e = vector.elements(); //using enumeration to iterate
 
     System.out.println();
 

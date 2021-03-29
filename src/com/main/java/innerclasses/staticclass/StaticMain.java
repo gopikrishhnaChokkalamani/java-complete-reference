@@ -30,6 +30,10 @@ public class StaticMain {
     main.nonStaticMethod();
     StaticMain.staticMethod();
 
+    StaticMain.StaticClass.staticMethod();
+    //or
+    StaticClass.staticMethod();
+    //or
     StaticClass nested = new StaticClass();
     nested.nonStaticMethod();
     StaticClass.staticMethod();

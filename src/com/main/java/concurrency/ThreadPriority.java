@@ -21,7 +21,7 @@ public class ThreadPriority {
 
     t2.setName("Thread 2");
     t2.setPriority(Thread.MIN_PRIORITY);
-    t2.join();
+    //t2.join();
 
     t2.start();
     //see the execution of the code by commenting and uncommenting the join codes
