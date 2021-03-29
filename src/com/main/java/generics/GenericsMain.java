@@ -1,6 +1,9 @@
 package com.main.java.generics;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class GenericsMain {
@@ -19,6 +22,9 @@ public class GenericsMain {
     // Bounded Type Parameter
     Student student = new Student();
     student.print(Arrays.asList("student list 1", "student list 2"));
+
+    //Type Inference - you dont have to give again <String>
+    List<String> list = new ArrayList<>();
   }
 
   //WildCards

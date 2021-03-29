@@ -1,4 +1,4 @@
-package com.main.java.abstraction.interfaces;
+package com.main.java.oopsconcepts.abstraction.interfaces;
 
 public interface MarkerInterfaceExample {
 

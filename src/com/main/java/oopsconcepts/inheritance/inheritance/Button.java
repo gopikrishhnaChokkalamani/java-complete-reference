@@ -1,4 +1,4 @@
-package com.main.java.inheritance;
+package com.main.java.oopsconcepts.inheritance.inheritance;
 
 public class Button implements Clickable, Accessible{
   @Override

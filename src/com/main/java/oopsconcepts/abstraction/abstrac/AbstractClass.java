@@ -1,4 +1,4 @@
-package com.main.java.abstraction.abstrac;
+package com.main.java.oopsconcepts.abstraction.abstrac;
 
 public abstract class AbstractClass {
 
