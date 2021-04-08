@@ -20,6 +20,8 @@ public final class Student {
     this.id = id;
     this.name = name;
     this.department = (Department) department.clone();
+
+    // you cannot do shallow copy, you have to do a deepcopy
     Map<String, String> newMap = new HashMap<>();
     for (Map.Entry<String, String> entry : map.entrySet()) {
       newMap.put(entry.getKey(), entry.getValue());

@@ -30,13 +30,13 @@ class Account implements Runnable {
   public void run() {
     //one way to fixing using synchronized this will avoid overdrawn, but our use case is john should withdraw first,
     // still the behaviour outcome is NOT correct
-        synchronized (this) {
+       // synchronized (this) {
           withdraw(75);
           //this.notify();
           if (balance < 0) {
             System.out.println("Money Overdrawn - " + Thread.currentThread().getName());
           }
-        }
+       // }
 //    withdraw(75);
 //    if (balance < 0) {
 //      System.out.println("Money Overdrawn - " + Thread.currentThread().getName());

@@ -1,7 +1,5 @@
 package com.main.java.generics;
 
-import com.main.java.interfaces.MarkerInterfaceExample;
-
 import java.io.Serializable;
 import java.util.List;
 

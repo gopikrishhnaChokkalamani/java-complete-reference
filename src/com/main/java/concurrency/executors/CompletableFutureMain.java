@@ -9,7 +9,7 @@ public class CompletableFutureMain {
 
   public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-    //executed aysnchronsly, if no executor is specififed, then it will uses the common fork join pool implementation
+    //executed aysnchrounsly, if no executor is specified, then it will uses the common fork join pool implementation
     //which will use a daemon thread to run the runnable
     CompletableFuture<Void> runAsync = CompletableFuture.runAsync(() -> {Thread.currentThread().isDaemon(); try {
       Thread.sleep(3000);
@@ -24,7 +24,6 @@ public class CompletableFutureMain {
     boolean as = runAsync.isDone();
     System.out.println(is);
     System.out.println("hi");
-
 
     //thenApply() will happen after the completion stage, it will apply a function on the result from previous stage
     //execution of function will be blocking, now getNow() will only be reached after the function completes
