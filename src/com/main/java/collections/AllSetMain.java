@@ -1,5 +1,6 @@
 package com.main.java.collections;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -33,6 +34,8 @@ public class AllSetMain {
 
     //cannot have duplicates, sorted by ascending by default
     Set<Integer> t = new TreeSet<>();
+    Set<Integer> t1 = new TreeSet<>((a, b) -> b.compareTo(a));
+    //Set<Integer> t1 = new TreeSet<>(Comparator.reverseOrder());
     t.add(13);
     t.add(2);
     t.add(9);
