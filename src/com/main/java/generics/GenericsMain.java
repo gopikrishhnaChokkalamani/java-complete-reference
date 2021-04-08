@@ -32,4 +32,7 @@ public class GenericsMain {
   public static void go(List<? extends Animal> cats) {
 
   }
+
+  public <T> void fetme(List<? super T> cats) {
+  }
 }
