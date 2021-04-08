@@ -68,6 +68,8 @@ public class CompletableFutureMain {
     //this will block
     cf.get();
 
+    CompletableFuture.allOf(cf);
+
     //this will not block returns a default value and main thread can continue
     //cf.getNow("completed");
 
