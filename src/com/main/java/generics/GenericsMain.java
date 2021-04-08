@@ -43,6 +43,7 @@ public class GenericsMain {
 
   }
 
+  //lower bounded wild cards
   public <T> void fetme(List<? super T> cats) {
   }
 }
